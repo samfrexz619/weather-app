@@ -37,3 +37,15 @@ input:checked + .toggle__slider {
 input:checked + .toggle__slider::before {
   transform: translateX(18px);
 }
+
+.search {
+  border-radius: 15px;
+  padding: 8px 18px;
+  // background: #f1f1f1;
+  input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+  }
+}
