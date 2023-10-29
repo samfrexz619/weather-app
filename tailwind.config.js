@@ -9,14 +9,23 @@ export default {
     extend: {
       colors: {
         pry: '#e8e9ea',
-        card_bg: '#383838',
+        // card_bg: '#383838',
         dark_bg: '#5d5b5b',
-      },
-      backgroundImage: {
-        main_bg: 'linear-gradient(90deg, rgba(217,217,217,1) 60%, rgba(41,41,41,0.6) 99%)',
+        bgg: '#636060',
+        card: '#D9D9D9',
+        text: '#292929',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif']
+      },
+      boxShadow: {
+        box: '10px 10px 4px 0px rgba(0, 0, 0, 0.50)',
+      },
+      borderRadius: {
+        30: '30px'
+      },
+      fontSize: {
+        60: '60px',
       }
     },
   },

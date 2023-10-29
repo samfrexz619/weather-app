@@ -1,18 +1,10 @@
-import useDark from "@/hooks/useDark";
-import { useState } from "react"
 
+interface Props {
+  isDark: boolean;
+  toggleMode: (checked: boolean)=> void;
+}
 
-
-const ToggleSwitch = () => {
-
-  const [colorTheme, setTheme] = useDark()
-
-  const [isDark, setIsDark] = useState(colorTheme === 'light' ? true : false)
-
-  const toggleMode =(checked: boolean)=> {
-    setTheme(colorTheme)
-    setIsDark(checked)
-  }
+const ToggleSwitch = ({ isDark, toggleMode }: Props) => {
 
   return ( 
     <label className='toggle'>

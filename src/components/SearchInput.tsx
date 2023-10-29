@@ -10,7 +10,7 @@ interface Props {
 
 const SearchInput = ({ placeholder, type, value, handleChange }: Props) => {
   return ( 
-    <div className="search w-[450px] bg-white dark:bg-pry">
+    <div className="search w-full bg-white dark:bg-pry">
       <input 
         type={type} 
         placeholder={placeholder} 
