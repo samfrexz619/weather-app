@@ -1,9 +1,13 @@
+import ToggleSwitch from "@/components/ToggleSwitch";
 
 
 const HomePage = () => {
   return ( 
-    <main>
-      hey
+    <main className="">
+      <section className="w-[900px] mx-auto min-h-screen bg-pry dark:bg-black">
+        <div>hey</div>
+        <ToggleSwitch  />
+      </section>
     </main>
    );
 }

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -7,7 +8,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        main_bg: 'linear-gradient(113deg, #FFF 0.28%, rgba(70, 97, 115, 0.00) 178.65%)',
+        pry: '#b3b6ba',
+        card_bg: '#383838',
+        dark_bg: '#5d5b5b',
+      },
+      backgroundImage: {
+        main_bg: 'linear-gradient(90deg, rgba(217,217,217,1) 60%, rgba(41,41,41,0.6) 99%)',
       }
     },
   },

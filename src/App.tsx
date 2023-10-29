@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import HomePage from './pages/Home'
-import './App.css'
+import './App.scss'
 
 
 
@@ -8,7 +8,7 @@ import './App.css'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomePage  />
+    element: <HomePage />
   },
 ])
 function App() {
