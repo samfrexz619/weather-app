@@ -14,6 +14,9 @@ export default {
       },
       backgroundImage: {
         main_bg: 'linear-gradient(90deg, rgba(217,217,217,1) 60%, rgba(41,41,41,0.6) 99%)',
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif']
       }
     },
   },

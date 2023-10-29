@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 
 const HomePage = () => {
   return ( 
-    <main className="">
+    <main className="w-full font-poppins">
       <section className="w-[900px] mx-auto min-h-screen bg-pry dark:bg-black">
         <div className="w-[93%] mx-auto">
           <Header  />
