@@ -1,21 +1,29 @@
-import DailyForcast from "@/components/DailyForcast";
+import DailyForcast from "@/components/DailyForecast";
 import Header from "@/components/Header";
+import HourlyForecast from "@/components/HourForecast";
 import TimeCard from "@/components/TimeCard";
 import WeatherCard from "@/components/WeatherCard";
 
 const HomePage = () => {
   return ( 
     <main className="w-full font-poppins bg-pry dark:bg-bgg">
-      <section className="w-[1100px] mx-auto min-h-screen">
-        <div className="w-[93%] mx-auto">
-          <Header  />
-          <div className="py-7 flex justify-between">
+      <section className="w-[93%] mx-auto min-h-screen">
+        <Header  />
+        <div className="py-7 md:flex justify-between w-full gap-x-10">
+          <div className="md:w-[35%] w-full py-5 md:py-0">
             <TimeCard  />
+          </div>
+          <div className="md:w-[65%] w-full">
             <WeatherCard />
           </div>
+        </div>
 
-          <div className="py-4">
+        <div className="py-4 lg:flex justify-between gap-x-10">
+          <div className="md:w-[30%] w-full">
             <DailyForcast  />
+          </div>
+          <div className="w-full md:w-[70%]">
+            <HourlyForecast  />
           </div>
         </div>
       </section>

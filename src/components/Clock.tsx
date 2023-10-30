@@ -28,15 +28,18 @@ const Clock = () => {
     setCurrentDate(formattedDate);
   }, [])
 
-  useEffect(() => {
-    const updateTime = () => {
-      const currentTime = new Date();
-      const hours = currentTime.getHours().toString().padStart(2, '0');
-      const minutes = currentTime.getMinutes().toString().padStart(2, '0');
-      // const seconds = currentTime.getSeconds().toString().padStart(2, '0');
-      setTime(`${hours}:${minutes}`);
-    };
+  const updateTime = () => {
+    const currentTime = new Date();
+    const hours = currentTime.getHours();
+    const minutes = currentTime.getMinutes().toString().padStart(2, '0');
+    const amPm = hours >= 12 ? 'PM' : 'AM';
+    const formattedHours = (hours % 12) || 12; 
 
+    const time = `${formattedHours}:${minutes}${amPm}`;
+    setTime(time);
+  };
+
+  useEffect(() => {
     updateTime();
     const intervalId = setInterval(updateTime, 1000);
 
