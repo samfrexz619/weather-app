@@ -26,6 +26,9 @@ export default {
       },
       fontSize: {
         60: '60px',
+      },
+      spacing: {
+        250: '250px'
       }
     },
   },

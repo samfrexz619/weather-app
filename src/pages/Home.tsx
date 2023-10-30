@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import TimeCard from "@/components/TimeCard";
+import WeatherCard from "@/components/WeatherCard";
 
 const HomePage = () => {
   return ( 
@@ -7,8 +8,11 @@ const HomePage = () => {
       <section className="w-[1100px] mx-auto min-h-screen">
         <div className="w-[93%] mx-auto">
           <Header  />
-          <div className="py-7">
+          <div className="py-7 flex justify-between">
             <TimeCard  />
+            <div>
+              <WeatherCard />
+            </div>
           </div>
         </div>
       </section>
