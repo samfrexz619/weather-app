@@ -1,3 +1,4 @@
+import DailyForcast from "@/components/DailyForcast";
 import Header from "@/components/Header";
 import TimeCard from "@/components/TimeCard";
 import WeatherCard from "@/components/WeatherCard";
@@ -10,9 +11,11 @@ const HomePage = () => {
           <Header  />
           <div className="py-7 flex justify-between">
             <TimeCard  />
-            <div>
-              <WeatherCard />
-            </div>
+            <WeatherCard />
+          </div>
+
+          <div className="py-4">
+            <DailyForcast  />
           </div>
         </div>
       </section>

@@ -19,7 +19,7 @@ export default {
         poppins: ['Poppins', 'sans-serif']
       },
       boxShadow: {
-        box: '10px 10px 4px 0px rgba(0, 0, 0, 0.50)',
+        box: '3px 3px 4px 0px rgba(0, 0, 0, 0.50)',
       },
       borderRadius: {
         30: '30px'
@@ -28,7 +28,7 @@ export default {
         60: '60px',
       },
       spacing: {
-        250: '250px'
+        260: '260px'
       }
     },
   },
