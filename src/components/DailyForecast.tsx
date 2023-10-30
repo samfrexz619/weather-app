@@ -12,28 +12,28 @@ const DailyForecast = () => {
         <div>
           <h3 className="capitalize font-bold text-2xl text-center py-3">5 days forecast:</h3>
           <div>
-            <div className='flex items-center justify-around px-2 py-2'>
-              <img src={cloud} alt="" />
+            <div className='flex items-center justify-around px-2 py-1'>
+              <img src={cloud} alt="" className='w-15 h-15' />
               <small>20&#8451;</small>
               <small>Friday, 1 sep</small>
             </div>
-            <div className='flex items-center justify-around px-2 py-2'>
-              <img src={drizzle} alt="" />
+            <div className='flex items-center justify-around px-2 py-1'>
+              <img src={drizzle} alt="" className='w-15 h-15' />
               <small>20&#8451;</small>
               <small>Friday, 1 sep</small>
             </div>
-            <div className='flex items-center justify-around px-2 py-2'>
-              <img src={mist} alt="" />
+            <div className='flex items-center justify-around px-2 py-1'>
+              <img src={mist} alt="" className='w-15 h-15' />
               <small>20&#8451;</small>
               <small>Friday, 1 sep</small>
             </div>
-            <div className='flex items-center justify-around px-2 py-2'>
-              <img src={rain} alt="" />
+            <div className='flex items-center justify-around px-2 py-1'>
+              <img src={rain} alt="" className='w-15 h-15' />
               <small>20&#8451;</small>
               <small>Friday, 1 sep</small>
             </div>
-            <div className='flex items-center justify-around px-2 py-2'>
-              <img src={sunshine} alt="" />
+            <div className='flex items-center justify-around px-2 py-1'>
+              <img src={sunshine} alt="" className='w-15 h-15' />
               <small>20&#8451;</small>
               <small>Friday, 1 sep</small>
             </div>

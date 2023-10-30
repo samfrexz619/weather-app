@@ -9,7 +9,7 @@ export default {
     extend: {
       colors: {
         pry: '#e8e9ea',
-        // card_bg: '#383838',
+        card_bg: '#373636',
         dark_bg: '#5d5b5b',
         bgg: '#636060',
         card: '#D9D9D9',
@@ -28,7 +28,14 @@ export default {
         60: '60px',
       },
       spacing: {
-        260: '260px'
+        260: '260px',
+        15: '60px',
+        95: '95%',
+      },
+      backgroundImage: {
+        orange: 'linear-gradient(171deg, #F88508 -12.41%, rgba(246, 250, 217, 0.00) 163.32%)',
+        grey: 'linear-gradient(174deg, #443D64 -15.92%, rgba(101, 130, 198, 0.00) 192.45%);',
+        
       }
     },
   },

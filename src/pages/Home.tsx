@@ -10,7 +10,7 @@ const HomePage = () => {
       <section className="w-[93%] mx-auto min-h-screen">
         <Header  />
         <div className="py-7 md:flex justify-between w-full gap-x-10">
-          <div className="md:w-[35%] w-full py-5 md:py-0">
+          <div className="md:w-[35%] py-5 md:py-0 w-10/12 mx-auto md:mx-0">
             <TimeCard  />
           </div>
           <div className="md:w-[65%] w-full">
@@ -19,7 +19,7 @@ const HomePage = () => {
         </div>
 
         <div className="py-4 lg:flex justify-between gap-x-10">
-          <div className="md:w-[30%] w-full">
+          <div className="md:w-[30%] w-full py-5 md:py-0">
             <DailyForcast  />
           </div>
           <div className="w-full md:w-[70%]">
