@@ -39,7 +39,7 @@ input:checked + .toggle__slider::before {
 }
 
 .search {
-  border-radius: 15px;
+  border-radius: 30px;
   padding: 10px 18px;
   // background: #f1f1f1;
   input {
@@ -51,16 +51,8 @@ input:checked + .toggle__slider::before {
 }
 
 .text-grad {
-  font-size: 72px;
-  background: -webkit-linear-gradient(#292929 -2.93%, rgba(255, 255, 255, 0.00));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
-}
-
-.text-dark {
-  background: linear-gradient(84deg, #FFF -16.56%, rgba(255, 255, 255, 0.00) 118.43%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
