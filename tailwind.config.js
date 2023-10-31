@@ -35,7 +35,7 @@ export default {
       backgroundImage: {
         orange: 'linear-gradient(171deg, #F88508 -12.41%, rgba(246, 250, 217, 0.00) 163.32%)',
         grey: 'linear-gradient(174deg, #443D64 -15.92%, rgba(101, 130, 198, 0.00) 192.45%);',
-        
+        dak: 'linear-gradient(174deg, #373636, #373636)'
       }
     },
   },

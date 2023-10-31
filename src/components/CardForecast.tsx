@@ -9,7 +9,7 @@ interface Props {
 
 const CardForecast = ({ variant }: Props) => {
   return ( 
-    <div className={`${variant === 'orange' ? 'bg-orange' : 'bg-grey'} h-260 w-32 p-4 rounded-[40px] dark:bg-card_bg`}>
+    <div className={`${variant === 'orange' ? 'bg-orange' : 'bg-grey'} h-260 w-32 p-4 rounded-[40px] dark:bg-dak`}>
       <div className="text-text dark:text-white flex flex-col items-center">
         <h2 className="font-bold text-2xl">12:00</h2>
         <div>
