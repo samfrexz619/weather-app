@@ -5,21 +5,21 @@ import useDark from "@/hooks/useDark"
 
 
 
-const Header = () => {
+interface Props {
+  handleInput: (e: React.ChangeEvent<HTMLInputElement>)=> void;
+  location: string;
+  searchLocation: (e: React.KeyboardEvent<HTMLInputElement>)=> void;
+}
+
+const Header = ({ handleInput, location, searchLocation}: Props) => {
 
   const [colorTheme, setTheme] = useDark()
 
   const [isDark, setIsDark] = useState(colorTheme === 'light' ? true : false)
 
-  const [searchWord, setSearchWord] = useState('')
-
   const toggleMode =(checked: boolean)=> {
     setTheme(colorTheme)
     setIsDark(checked)
-  }
-
-  const handleInput =(e: React.ChangeEvent<HTMLInputElement>)=> {
-    setSearchWord(e.target.value)
   }
 
   return (
@@ -38,8 +38,9 @@ const Header = () => {
           <SearchInput 
             placeholder='Search for your preferred city...'
             type='search'
-            value={searchWord}
+            value={location}
             handleChange={handleInput}
+            searchLocation={searchLocation}
           />
         </div>
       </div>

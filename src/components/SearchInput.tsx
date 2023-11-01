@@ -6,9 +6,10 @@ interface Props {
   type: string;
   value: string;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>)=> void;
+  searchLocation: (e: React.KeyboardEvent<HTMLInputElement>)=> void;
 }
 
-const SearchInput = ({ placeholder, type, value, handleChange }: Props) => {
+const SearchInput = ({ placeholder, type, value, handleChange, searchLocation }: Props) => {
   return ( 
     <div className="search w-full bg-white dark:bg-pry">
       <input 
@@ -16,6 +17,7 @@ const SearchInput = ({ placeholder, type, value, handleChange }: Props) => {
         placeholder={placeholder} 
         onChange={handleChange}
         value={value}
+        onKeyDown={searchLocation}
       />
     </div>
    );
