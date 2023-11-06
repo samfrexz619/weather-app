@@ -18,10 +18,16 @@ const HomePage = () => {
     setLocation(e.target.value)
   }
 
+  // const getData =()=> {
+  //   fetchWeather(location || 'nigeria')
+  //       .then(res => setWeather(res.data))
+  // }
+
   const searchLocation =(e: React.KeyboardEvent<HTMLInputElement>)=> {
     if(e.key === 'Enter'){
       fetchWeather(location || 'nigeria')
         .then(res => setWeather(res.data))
+        setLocation('')
     }
   }
 
@@ -43,7 +49,12 @@ const HomePage = () => {
             <TimeCard />
           </div>
           <div className="md:w-[65%] w-full">
-            {weather?.main ? <WeatherCard main={weather.main}/> : ''}
+            {
+              weather?.main 
+              ? <WeatherCard main={weather.main}/> 
+              : <WeatherCard />
+            }
+            
           </div>
         </div>
 

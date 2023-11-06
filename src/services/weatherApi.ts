@@ -16,3 +16,8 @@ export const fetchForecast = async(location: string)=> {
   const res = await weatherApi.get(`/forecast?q=${location}&appid=${apiKey}`)
   return res
 }
+
+export const fetchStaticForecast = async()=> {
+  const res = await weatherApi.get(`/weather?q=nigeria&units=imperial&appid=${apiKey}`)
+  return res
+}
