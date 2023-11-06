@@ -7,8 +7,8 @@ const weatherApi = axios.create({
   baseURL: 'http://api.openweathermap.org/data/2.5',
 })
 
-export const fetchWeather = async()=> {
-  const res = await weatherApi.get(`/weather?q=nigeria&units=imperial&appid=${apiKey}`)
+export const fetchWeather = async(location: string)=> {
+  const res = await weatherApi.get(`/weather?q=${location}&units=imperial&appid=${apiKey}`)
   return res
 }
 

@@ -4,13 +4,13 @@ import Header from "@/components/Header";
 import HourlyForecast from "@/components/HourForecast";
 import TimeCard from "@/components/TimeCard";
 import WeatherCard from "@/components/WeatherCard";
-import { fetchForecast } from "@/services/weatherApi";
-
+import { fetchWeather } from "@/services/weatherApi";
+import { Weather } from "@/lib/types";
 
 
 const HomePage = () => {
 
-  const [weather, setWeather] = useState(null)
+  const [weather, setWeather] = useState<Weather>()
 
   const [location, setLocation] = useState('')
 
@@ -20,15 +20,16 @@ const HomePage = () => {
 
   const searchLocation =(e: React.KeyboardEvent<HTMLInputElement>)=> {
     if(e.key === 'Enter'){
-      fetchForecast(location)
+      fetchWeather(location || 'nigeria')
         .then(res => setWeather(res.data))
     }
   }
 
+  // const forecast = weather?.main ? weather.main : ''
+
   useEffect(()=> {
   },[])
 
-  console.log(weather)
   return ( 
     <main className="w-full font-poppins bg-pry dark:bg-bgg">
       <section className="w-[93%] mx-auto min-h-screen">
@@ -39,10 +40,10 @@ const HomePage = () => {
         />
         <div className="py-7 md:flex justify-between w-full gap-x-10">
           <div className="md:w-[35%] py-5 md:py-0 w-10/12 mx-auto md:mx-0">
-            <TimeCard  />
+            <TimeCard />
           </div>
           <div className="md:w-[65%] w-full">
-            <WeatherCard />
+            {weather?.main ? <WeatherCard main={weather.main}/> : ''}
           </div>
         </div>
 
