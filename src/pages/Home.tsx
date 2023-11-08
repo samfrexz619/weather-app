@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import HourlyForecast from "@/components/HourForecast";
 import TimeCard from "@/components/TimeCard";
 import WeatherCard from "@/components/WeatherCard";
-import { fetchWeather } from "@/services/weatherApi";
+import { fetchWeather } from "@/utils/weatherApi";
 import { Weather } from "@/lib/types";
 
 

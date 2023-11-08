@@ -24,15 +24,13 @@ const WeatherCard = ({ main, detail }: Props) => {
         <div className='text-center h-full'>
           {
             detail?.description === 'light rain'
-            ? <img src={rain} alt="sun image" className='w-[180px]' />
-            : detail?.description === 'scattered storm'
-            ? <img src={mist} alt='mist' className='w-[180px]' />
+            ? <img src={rain} alt="sun image" className='w-[160px]' />
+            : detail?.description === 'scattered clouds'
+            ? <img src={mist} alt='mist' className='w-[160px]' />
             : detail?.description === 'overcast clouds' || detail?.description === 'broken clouds' || detail?.description === 'few clouds'
-            ? <img src={cloud} alt='cloud' className='w-[180px]' />
-            : <img src={sunny} alt="sun image" className='w-[180px]' />
+            ? <img src={cloud} alt='cloud' className='w-[160px]' />
+            : <img src={sunny} alt="sun image" className='w-[160px]' />
           }
-          {/* || 'broken clouds' || 'few clouds'
-            <img src={sunny} alt="sun image" className='w-[180px]' /> */}
           <p className='text-2xl font-bold text-center'>
           { detail?.description || 'sunny'}
           </p>
