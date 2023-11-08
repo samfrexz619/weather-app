@@ -18,11 +18,6 @@ const HomePage = () => {
     setLocation(e.target.value)
   }
 
-  // const getData =()=> {
-  //   fetchWeather(location || 'nigeria')
-  //       .then(res => setWeather(res.data))
-  // }
-
   const searchLocation =(e: React.KeyboardEvent<HTMLInputElement>)=> {
     if(e.key === 'Enter'){
       fetchWeather(location || 'nigeria')
@@ -30,9 +25,8 @@ const HomePage = () => {
         setLocation('')
     }
   }
-
-  // const forecast = weather?.main ? weather.main : ''
-
+  console.log(weather);
+  
   useEffect(()=> {
   },[])
 
@@ -51,7 +45,7 @@ const HomePage = () => {
           <div className="md:w-[65%] w-full">
             {
               weather?.main 
-              ? <WeatherCard main={weather.main}/> 
+              ? <WeatherCard main={weather.main} detail={weather.weather[0]}/> 
               : <WeatherCard />
             }
             

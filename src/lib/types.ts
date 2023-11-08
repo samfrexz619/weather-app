@@ -6,7 +6,15 @@ export interface Main {
   pressure: number;
   humidity: number;
 }
+export interface Detail {
+  id: number;
+  main: string;
+  description: string;
+}
 export interface Weather {
   name: string;
   main: Main;
+  weather: Detail[];
 }
+
+
