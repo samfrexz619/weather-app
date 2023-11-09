@@ -12,7 +12,7 @@ interface Props {
 }
 
 
-const WeatherCard = ({ main, detail }: Props) => {
+const WeatherCard: React.FC<Props> = ({ main, detail }) => {
   return (
     <div className="min-h-260 py-4 bg-card rounded-30 dark:bg-[#444] shadow-box w-full">
       <div className="w-95 mx-auto py-4 flex gap-x-5 text-text dark:text-white">
