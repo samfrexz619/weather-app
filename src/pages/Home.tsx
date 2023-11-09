@@ -1,4 +1,3 @@
-// import weatherApp from '@/assets/images/mock_up.png'
 import { NavLink } from 'react-router-dom';
 
 const HomePage = () => {
@@ -16,7 +15,6 @@ const HomePage = () => {
         </header>
       <div className='w-[92%] mx-auto'>
         <section className="min-h-screen mt-16 bg-img dark:bg-dark_img">
-          {/* <img src={weatherApp} alt="" /> */}
         </section>
       </div>
     </main>
