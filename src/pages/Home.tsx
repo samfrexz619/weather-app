@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import weatherApp from '@/assets/images/dark.png'
 
 const HomePage = () => {
 
@@ -14,8 +15,7 @@ const HomePage = () => {
           </nav>
         </header>
       <div className='w-[92%] mx-auto'>
-        <section className='py-10'>
-          {/* <h2>Description</h2><br /> */}
+        <section className='py-10 dark:text-white'>
           <p>
           WeatherApp combines a clean, modern design with powerful data sources to bring you reliable and visually appealing weather information. 
           Whether you're planning a weekend getaway or just want to know if you'll need an umbrella, WeatherApp has you covered.
@@ -25,7 +25,8 @@ const HomePage = () => {
           and experience weather forecasting like never before!
           </p>
         </section>
-        <section className="min-h-screen mt-16 bg-img dark:bg-dark_img">
+        <section className="min-h-screen mt-16">
+          <img src={weatherApp} alt="" />
         </section>
       </div>
     </main>
