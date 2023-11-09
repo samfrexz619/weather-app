@@ -11,7 +11,7 @@ export interface Detail {
   main: string;
   description: string;
 }
-export interface Weather {
+export interface Forecast {
   name: string;
   main: Main;
   weather: Detail[];

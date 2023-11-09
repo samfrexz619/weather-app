@@ -37,7 +37,9 @@ export default {
         grey: 'linear-gradient(174deg, #443D64 -15.92%, rgba(101, 130, 198, 0.00) 192.45%);',
         dak: 'linear-gradient(174deg, #373636, #373636)',
         txt_dak: 'linear-gradient(84deg, #FFF -16.56%, rgba(255, 255, 255, 0.00) 118.43%);',
-        txt_lit: '-webkit-linear-gradient(#292929 -2.93%, rgba(255, 255, 255, 0.00))'
+        txt_lit: '-webkit-linear-gradient(#292929 -2.93%, rgba(255, 255, 255, 0.00))',
+        img: "url('./src/assets/images/mock_up.png')",
+        dark_img: "url('./src/assets/images/dark.png')"
       }
     },
   },

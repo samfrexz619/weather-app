@@ -1,66 +1,24 @@
-import { useEffect, useState } from "react";
-import DailyForcast from "@/components/DailyForecast";
-import Header from "@/components/Header";
-import HourlyForecast from "@/components/HourForecast";
-import TimeCard from "@/components/TimeCard";
-import WeatherCard from "@/components/WeatherCard";
-import { fetchWeather } from "@/utils/weatherApi";
-import { Weather } from "@/lib/types";
-
+// import weatherApp from '@/assets/images/mock_up.png'
+import { NavLink } from 'react-router-dom';
 
 const HomePage = () => {
 
-  const [weather, setWeather] = useState<Weather>()
-
-  const [location, setLocation] = useState('')
-
-  const handleInput =(e: React.ChangeEvent<HTMLInputElement>)=> {
-    setLocation(e.target.value)
-  }
-
-  const searchLocation =(e: React.KeyboardEvent<HTMLInputElement>)=> {
-    if(e.key === 'Enter'){
-      fetchWeather(location || 'nigeria')
-        .then(res => setWeather(res.data))
-        setLocation('')
-    }
-  }
-  console.log(weather);
-  
-  useEffect(()=> {
-  },[])
-
   return ( 
-    <main className="w-full font-poppins bg-pry dark:bg-bgg">
-      <section className="w-[93%] mx-auto min-h-screen">
-        <Header 
-          handleInput={handleInput} 
-          location={location} 
-          searchLocation={searchLocation}
-        />
-        <div className="py-7 md:flex justify-between w-full gap-x-10">
-          <div className="md:w-[35%] py-5 md:py-0 w-10/12 mx-auto md:mx-0">
-            <TimeCard />
-          </div>
-          <div className="md:w-[65%] w-full">
-            {
-              weather?.main 
-              ? <WeatherCard main={weather.main} detail={weather.weather[0]}/> 
-              : <WeatherCard />
-            }
-            
-          </div>
-        </div>
-
-        <div className="py-4 lg:flex justify-between gap-x-10">
-          <div className="md:w-[30%] w-full py-5 md:py-0">
-            <DailyForcast  />
-          </div>
-          <div className="w-full md:w-[70%]">
-            <HourlyForecast  />
-          </div>
-        </div>
-      </section>
+    <main className="w-full font-poppins bg-gray-50 dark:bg-bgg">
+        <header className="h-20 border-solid border-b-2 border-gray-300 w-full text-black dark:text-white">
+          <nav className='h-full flex items-center justify-between w-[92%] mx-auto'>
+            <NavLink to='/' className='text-2xl font-bold'>WeatherAPP</NavLink>
+            <div className='flex gap-x-4'>
+              <NavLink to={'/weather'} className='font-bold hover:text-gray-500'>Weather</NavLink>
+              <NavLink to={'#'} className='font-bold'>About</NavLink>
+            </div>
+          </nav>
+        </header>
+      <div className='w-[92%] mx-auto'>
+        <section className="min-h-screen mt-16 bg-img dark:bg-dark_img">
+          {/* <img src={weatherApp} alt="" /> */}
+        </section>
+      </div>
     </main>
    );
 }
