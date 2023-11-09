@@ -1,6 +1,5 @@
 
 
-
 interface Props {
   placeholder: string;
   type: string;
@@ -9,7 +8,7 @@ interface Props {
   searchLocation: (e: React.KeyboardEvent<HTMLInputElement>)=> void;
 }
 
-const SearchInput = ({ placeholder, type, value, handleChange, searchLocation }: Props) => {
+const SearchInput: React.FC<Props> = ({ placeholder, type, value, handleChange, searchLocation }) => {
   return ( 
     <div className="search w-full bg-white dark:bg-pry">
       <input 
