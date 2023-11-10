@@ -4,7 +4,7 @@ const Nav = () => {
   return ( 
     <header className="h-20 bg-gray-100 dark:bg-bgg border-solid border-b-2 border-gray-300 w-full">
       <nav className='h-full flex items-center justify-between w-[92%] mx-auto'>
-        <NavLink to='/' className='text-2xl font-bold text-black dark:text-white'>
+        <NavLink to='/' className='text-2xl font-bold text-black dark:text-white italic'>
           WeatherAPP
         </NavLink>
         <div className='flex gap-x-4'>
